@@ -1,0 +1,109 @@
+{
+	"dft_url":"http://127.0.0.1:1081/cfg/AGV1",
+	"cfg_array":
+	[
+		{"name":"ID","dft":"AGV1","type":"string","des":"机器人ID"},
+		{"name":"is_rec_dbg","dft":0,"type":"int","des":"是否记录调试信息"},
+		{"name":"is_sim","dft":0,"type":"int","des":"是否仿真"},
+		{"name":"is_en","dft":0,"type":"int","des":"选择中文还是英语"},
+		{"name":"is_send_lidarjson","dft":0,"type":"int","des":"是否发雷达数据显示"},
+		{"name":"is_lidar_fl","dft":0,"type":"int","des":"是否开雷达寻线算法"},
+		{"name":"lidar_fl","type":"obj","des":"雷达寻线参数","dft":
+			[
+				{"name":"search_w","dft":20,"type":"int","des":"搜索宽度(栅格数0.1m)"},
+				{"name":"search_h","dft":40,"type":"int","des":"搜索高度(栅格数0.1m)"},
+				{"name":"min_w","dft":12,"type":"int","des":"最小宽度(栅格数0.1m)"},
+				{"name":"base_h","dft":20,"type":"int","des":"转向基准行"}
+			]
+		},
+
+		{"name":"dpid_p","dft":200,"type":"double","des":"前进转向的PID的P值"},
+		{"name":"dpid_d","dft":200,"type":"double","des":"前进转向的PID的D值"},
+
+		{"name":"b_dpid_p","dft":200,"type":"double","des":"倒车转向PID的P值"},
+		{"name":"b_dpid_d","dft":600,"type":"double","des":"倒车转向PID的D值"},
+
+		{"name":"steer_pid_p","dft":3,"type":"double","des":"方向舵机P值"},
+		{"name":"steer_pid_i","dft":0,"type":"double","des":"方向舵机i值"},
+		{"name":"steer_pid_d","dft":1,"type":"double","des":"方向舵机d值"},
+
+		{"name":"turnpid_p","dft":150,"type":"double","des":"原地转向P值"},
+		{"name":"turnpid_i","dft":80,"type":"double","des":"原地转向i值"},
+		{"name":"turnpid_d","dft":40,"type":"double","des":"原地转向d值"},
+
+		{"name":"ws_r_ip","dft":"192.168.100.102","type":"string","des":"服务器IP地址"},
+		{"name":"ws_r_port","dft":1081,"type":"int","des":"服务器端口号"},
+
+		{"name":"dbg_l_ip","dft":"0.0.0.0","type":"string","des":"本地的调试udp的IP地址"},
+		{"name":"dbg_l_port","dft":41003,"type":"int","des":"本地的调试udp的端口号"},
+		{"name":"dbg_r_ip","dft":"192.168.100.101","type":"string","des":"远程的调试udp的IP地址"},
+		{"name":"dbg_r_port","dft":41003,"type":"int","des":"远程调试udp的端口号"},
+
+		{"name":"uart1_port","dft":"/dev/ttyS1","type":"string","des":"串口1的配置端口"},
+		{"name":"uart1_baud","dft":460800,"type":"int","des":"串口1的波特率"},
+		{"name":"uart2_port","dft":"/dev/ttyS2","type":"string","des":"串口2的配置端口"},
+		{"name":"uart2_baud","dft":115200,"type":"int","des":"串口2的波特率"},
+
+		{"name":"gps_l_ip","dft":"0.0.0.0","type":"string","des":"本地GPS的IP地址"},
+		{"name":"gps_l_port","dft":0,"type":"int","des":"本地GPS的端口号"},
+		{"name":"gps_r_ip","dft":"192.168.100.102","type":"string","des":"远程GPS的IP地址"},
+		{"name":"gps_r_port","dft":8888,"type":"int","des":"远程GPS的端口号"},
+
+		{"name":"lidar_l_ip","dft":"0.0.0.0","type":"string","des":"本地雷达的IP地址"},
+		{"name":"lidar_l_port","dft":2368,"type":"int","des":"本地雷达的端口号"},
+		{"name":"lidar_r_ip","dft":"127.0.0.1","type":"string","des":"远程雷达的IP地址"},
+		{"name":"lidar_r_port","dft":44445,"type":"int","des":"远程雷达的端口号"},
+
+		{"name":"user_l_ip","dft":"0.0.0.0","type":"string","des":"用户程序本地IP地址"},
+		{"name":"user_l_port","dft":41004,"type":"int","des":"用户程序本地端口号"},
+		{"name":"user_r_ip","dft":"127.0.0.1","type":"string","des":"用户程序远程IP地址"},
+		{"name":"user_r_port","dft":41005,"type":"int","des":"用户程序远程端口号"},
+
+		{"name":"map_base","type":"obj","des":"地图基准","dft":
+			[
+				{"name":"x","dft":116.3463531,"type":"double","des":"经度"},
+				{"name":"y","dft":39.9845989,"type":"double","des":"纬度"}
+			]
+		},
+		{"name":"start_pos","type":"obj","des":"机器人起始位姿","dft":
+			[
+				{"name":"x","dft":0,"type":"double","des":"X轴位置"},
+				{"name":"y","dft":0,"type":"double","des":"Y轴位置"},
+				{"name":"z","dft":0,"type":"double","des":"角度"}
+			]
+		},
+
+		{"name":"enc_N0","dft":4046,"type":"int","des":"车轮转动一周，左后编码器的值"},
+		{"name":"enc_N1","dft":3965,"type":"int","des":"车轮转动一周，右后编码器的值"},
+		{"name":"enc_L","dft":0.531,"type":"double","des":"轮距"},
+		{"name":"enc_D","dft":0.264,"type":"double","des":"轮径"},
+		{"name":"enc_front","dft":0.8,"type":"double","des":"后桥到达距离"},
+		{"name":"LD_front","dft":0.1,"type":"double","des":"雷达到车头距离"},
+		{"name":"LD_behind","dft":0.6,"type":"double","des":"雷达到车尾距离"},
+		{"name":"LD_side","dft":0.2,"type":"double","des":"雷达到车两侧的距离"},
+		{"name":"Front_oa","dft":0.4,"type":"double","des":"雷达到车前避障距离"},
+		{"name":"Side_oa","dft":0.3,"type":"double","des":"雷达到车两侧避障距离"},
+		{"name":"bat_ad22","dft":2731,"type":"int","des":"电池22V的AD值"},
+		{"name":"bat_ad26","dft":3225,"type":"int","des":"电池26V的AD值"},
+		{"name":"bat_low_th","dft":23.1,"type":"double","des":"电池低压阈值"},
+		{"name":"Vehicle_choose","dft":1,"type":"int","des":"室内(1)室外(0)车选择"},
+		
+		{"name":"mcu_pidv_f","dft":0.0,"type":"double","des":"车辆速度前馈"},
+		{"name":"mcu_pidv_k","dft":0.5,"type":"double","des":"车辆速度K系数"},
+		{"name":"mcu_pidv_p","dft":2.1,"type":"double","des":"车辆速度P系数"},
+		{"name":"mcu_pidv_i","dft":1.1,"type":"double","des":"车辆速递I系数"},
+		{"name":"mcu_pidv_d","dft":0.0,"type":"double","des":"车辆速度D系数"},
+
+		{"name":"app_type","dft":1,"type":"int","des":"车辆类型选择"},
+		{"name":"imu_enable","dft":1,"type":"int","des":"是(1)否(0)使用惯导"},
+
+		{"name":"agv_radius","dft":50,"type":"double","des":"AGV对角线半径"},
+		{"name":"agv_secure","dft":50,"type":"double","des":"AGV避障安全距离"},
+
+		{"name":"id_list","type":"stringarray","des":"","dft":
+			[
+				"AGV1", "AGV2", "AGV3"
+			]
+		}
+	]
+}
